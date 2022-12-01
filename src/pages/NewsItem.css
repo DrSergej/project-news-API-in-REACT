@@ -1,0 +1,19 @@
+img {
+	height: 150px;
+}
+
+a {
+	padding: 7px 20px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border-radius: 4px;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 10px;
+	width: 60%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
