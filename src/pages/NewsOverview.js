@@ -1,17 +1,18 @@
-import { useState, useEffect } from "react";
-import "./NewsOverview.css";
+import { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
+import "./NewsOverview.css";
 
 const NewsOverview = () => {
+	const API_KEY = process.env.REACT_APP_API_KEY;
 	const [news, setNews] = useState([]);
 	useEffect(() => {
 		fetch(
-			"https://newsapi.org/v2/everything?q=Apple&from=2022-12-01&sortBy=popularity&apiKey=b8d33b7d31d34342aec20ede3cec37d8"
+			`https://newsapi.org/v2/everything?q=apple&from=2023-03-22&to=2023-03-22&sortBy=popularity&apiKey=${API_KEY}`
 		)
 			.then((res) => res.json())
 			.then((json) => setNews(json.articles));
+		console.log(news);
 	}, []);
-	console.log(news);
 
 	return (
 		<section className="grid">
