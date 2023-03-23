@@ -8,7 +8,7 @@ const NewsItem = (props) => {
 			<h2>{props.title}</h2>
 			<p>{props.description}</p>
 			<p>{props.date}</p>
-			<a href={props.url} target="_blank">
+			<a href={props.url} target="_blank" rel="noreferrer">
 				Read original article
 			</a>
 			<Link to={`/article/${props.title}`}>Read article</Link>
