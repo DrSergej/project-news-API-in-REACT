@@ -11,8 +11,8 @@ const NewsOverview = () => {
 		)
 			.then((res) => res.json())
 			.then((json) => setNews(json.articles));
-		console.log(news);
-	}, []);
+		// console.log(news);
+	}, [API_KEY]);
 
 	return (
 		<section className="grid">

@@ -16,7 +16,7 @@ const NewsItemDetails = () => {
 		)
 			.then((response) => response.json())
 			.then((json) => setFilteredData(json.articles));
-	}, []);
+	}, [API_KEY]);
 
 	let filterDetail = filteredData.filter((elt) => {
 		return (
